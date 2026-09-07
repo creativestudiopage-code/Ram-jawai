@@ -1,485 +1,1087 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ram Jawai - Safari Expert</title>
-  <style>
-    /* RESET & BASE STYLES */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#121414"/>
+<title>Ram Jawai — Leopard Safari Expert & Wildlife Filmmaker</title>
+
+<!-- Preconnect for faster external resources -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="https://images.unsplash.com"/>
+
+<!-- Preload critical above-fold assets -->
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1549366021-9f761d450615?w=1600&q=80" fetchpriority="high"/>
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80" fetchpriority="high"/>
+<link rel="preload" as="video" href="0902.mp4" type="video/mp4"/>
+
+<style>
+
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+html{line-height:1.5;-webkit-text-size-adjust:100%}
+body{margin:0;line-height:inherit}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+b,strong{font-weight:bolder}
+button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}
+button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:transparent;background-image:none}
+:-moz-focusring{outline:auto}
+:-moz-ui-invalid{box-shadow:none}
+blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}
+fieldset{margin:0;padding:0}
+ol,ul,menu{list-style:none;margin:0;padding:0}
+img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}
+img,video{max-width:100%;height:auto}
+[hidden]{display:none}
+textarea{resize:vertical}
+input::placeholder,textarea::placeholder{opacity:1}
+
+@keyframes pulse{50%{opacity:.5}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bounce{0%,100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(.8,0,1,1)}50%{transform:translateY(0);animation-timing-function:cubic-bezier(0,0,.2,1)}}
+.material-symbols-outlined { font-family:'Material Symbols Outlined'; font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none; display:inline-block; white-space:nowrap; word-wrap:normal; direction:ltr; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility; font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+/* Tailwind utilities — compiled statically (no runtime CDN needed) */
+.text-body-lg { font-size:18px;line-height:28px;font-weight:400 }
+.text-body-md { font-size:16px;line-height:24px;font-weight:400 }
+.text-display-lg-mobile { font-size:40px;line-height:48px;font-weight:700;letter-spacing:-0.01em }
+.text-headline-lg { font-size:48px;line-height:56px;font-weight:700 }
+.text-headline-md { font-size:32px;line-height:40px;font-weight:600 }
+.text-headline-sm { font-size:24px;line-height:32px;font-weight:600 }
+.text-label-md { font-size:14px;line-height:20px;font-weight:600;letter-spacing:0.1em }
+.-bottom-6 { bottom:-1.5rem }
+.-right-6 { right:-1.5rem }
+.-space-x-3 > :not([hidden]) ~ :not([hidden]) { margin-left:-0.75rem }
+.-translate-x-1\/2 { transform:translateX(-50%) }
+.absolute { position:absolute }
+.active\:scale-95:active { transform:scale(0.95) }
+.animate-pulse { animation:pulse 2s cubic-bezier(0.4,0,0.6,1) infinite }
+.antialiased { -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale }
+.aspect-\[9\/16\] { aspect-ratio:9/16 }
+.bg-black\/30 { background-color:rgba(0,0,0,0.3) }
+.bg-gradient-to-t { background-image:linear-gradient(to top, var(--tw-gradient-stops, rgba(0,0,0,0))) }
+.bg-primary { background-color:rgb(242,202,80) }
+.bg-primary\/10 { background-color:rgba(242,202,80,0.1) }
+.bg-primary\/15 { background-color:rgba(242,202,80,0.15) }
+.bg-primary\/20 { background-color:rgba(242,202,80,0.2) }
+.bg-primary\/90 { background-color:rgba(242,202,80,0.9) }
+.bg-surface-container-high { background-color:rgb(40,42,43) }
+.bg-surface-container-highest { background-color:rgb(51,53,53) }
+.bg-transparent { background-color:transparent }
+.block { display:block }
+.border { border-width:1px;border-color:#e5e7eb }
+.border-2 { border-width:2px }
+.border-b-2 { border-bottom-width:2px }
+.border-l-0 { border-left-width:0 }
+.border-on-surface\/10 { border-color:rgba(226,226,226,0.1) }
+.border-outline { border-color:rgb(153,144,124) }
+.border-outline-variant\/20 { border-color:rgba(77,70,53,0.2) }
+.border-primary { border-color:rgb(242,202,80) }
+.border-primary\/20 { border-color:rgba(242,202,80,0.2) }
+.border-primary\/30 { border-color:rgba(242,202,80,0.3) }
+.border-r-0 { border-right-width:0 }
+.border-surface { border-color:rgb(18,20,20) }
+.border-t { border-top-width:1px }
+.border-t-0 { border-top-width:0 }
+.border-white\/10 { border-color:rgba(255,255,255,0.1) }
+.border-white\/20 { border-color:rgba(255,255,255,0.2) }
+.bottom-0 { bottom:0 }
+.bottom-4 { bottom:1rem }
+.bottom-8 { bottom:2rem }
+.cursor-pointer { cursor:pointer }
+.divide-outline-variant { border-color:rgb(77,70,53) }
+.divide-y > :not([hidden]) ~ :not([hidden]) { border-top-width:1px }
+.drop-shadow-lg { filter:drop-shadow(0 10px 8px rgba(0,0,0,0.04)) drop-shadow(0 4px 3px rgba(0,0,0,0.1)) }
+.drop-shadow-md { filter:drop-shadow(0 4px 3px rgba(0,0,0,0.07)) drop-shadow(0 2px 2px rgba(0,0,0,0.06)) }
+.duration-200 { transition-duration:200ms }
+.duration-300 { transition-duration:300ms }
+.duration-700 { transition-duration:700ms }
+.fixed { position:fixed }
+.flex { display:flex }
+.flex-col { flex-direction:column }
+.flex-grow { flex-grow:1 }
+.flex-shrink-0 { flex-shrink:0 }
+.flex-wrap { flex-wrap:wrap }
+.focus\:border-primary:focus { border-color:rgb(242,202,80) }
+.focus\:ring-0:focus { --tw-ring-width:0px;box-shadow:0 0 #0000 }
+.font-body-lg { font-family:'Inter', system-ui, sans-serif }
+.font-body-md { font-family:'Inter', system-ui, sans-serif }
+.font-bold { font-weight:700 }
+.font-display-lg-mobile { font-family:'Playfair Display', Georgia, serif }
+.font-headline-lg { font-family:'Playfair Display', Georgia, serif }
+.font-headline-md { font-family:'Playfair Display', Georgia, serif }
+.font-headline-sm { font-family:'Playfair Display', Georgia, serif }
+.font-label-md { font-family:'Inter', system-ui, sans-serif }
+.font-medium { font-weight:500 }
+.font-semibold { font-weight:600 }
+.from-black\/80 { --tw-gradient-from:rgba(0,0,0,0.8);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to, rgba(0,0,0,0)) }
+.gap-1 { gap:0.25rem }
+.gap-1\.5 { gap:0.375rem }
+.gap-12 { gap:3rem }
+.gap-2 { gap:0.5rem }
+.gap-3 { gap:0.75rem }
+.gap-4 { gap:1rem }
+.gap-5 { gap:1.25rem }
+.gap-6 { gap:1.5rem }
+.gap-8 { gap:2rem }
+.grid { display:grid }
+.grid-cols-1 { grid-template-columns:repeat(1,minmax(0,1fr)) }
+.grid-cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)) }
+.group:hover .group-hover\:bg-primary { background-color:rgb(242,202,80) }
+.group:hover .group-hover\:scale-105 { transform:scale(1.05) }
+.group:hover .group-hover\:text-on-primary { color:rgb(60,47,0) }
+.h-10 { height:2.5rem }
+.h-12 { height:3rem }
+.h-14 { height:3.5rem }
+.h-2 { height:0.5rem }
+.h-4 { height:1rem }
+.h-5 { height:1.25rem }
+.h-64 { height:16rem }
+.h-\[450px\] { height:450px }
+.h-full { height:100% }
+.hidden { display:none }
+.hover\:-translate-y-1:hover { transform:translateY(-0.25rem) }
+.hover\:-translate-y-2:hover { transform:translateY(-0.5rem) }
+.hover\:border-primary:hover { border-color:rgb(242,202,80) }
+.hover\:border-primary\/50:hover { border-color:rgba(242,202,80,0.5) }
+.hover\:brightness-110:hover { filter:brightness(1.1) }
+.hover\:opacity-80:hover { opacity:0.8 }
+.hover\:text-primary:hover { color:rgb(242,202,80) }
+.inline-flex { display:inline-flex }
+.inset-0 { inset:0 }
+.items-center { align-items:center }
+.justify-between { justify-content:space-between }
+.justify-center { justify-content:center }
+.justify-end { justify-content:flex-end }
+.leading-relaxed { line-height:1.625 }
+.leading-snug { line-height:1.375 }
+.leading-tight { line-height:1.25 }
+.left-1\/2 { left:50% }
+.left-4 { left:1rem }
+@media (min-width: 1024px) { .lg\:block { display:block } }
+@media (min-width: 1024px) { .lg\:col-span-5 { grid-column:span 5 / span 5 } }
+@media (min-width: 1024px) { .lg\:col-span-7 { grid-column:span 7 / span 7 } }
+@media (min-width: 1024px) { .lg\:flex { display:flex } }
+@media (min-width: 1024px) { .lg\:gap-20 { gap:5rem } }
+@media (min-width: 1024px) { .lg\:grid-cols-12 { grid-template-columns:repeat(12,minmax(0,1fr)) } }
+@media (min-width: 1024px) { .lg\:grid-cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+@media (min-width: 1024px) { .lg\:px-8 { padding-left:2rem;padding-right:2rem } }
+.max-h-\[75vh\] { max-height:75vh }
+.max-w-2xl { max-width:42rem }
+.max-w-\[1440px\] { max-width:1440px }
+.max-w-\[240px\] { max-width:240px }
+.max-w-\[280px\] { max-width:280px }
+.max-w-xl { max-width:36rem }
+.mb-12 { margin-bottom:3rem }
+.mb-2 { margin-bottom:0.5rem }
+.mb-4 { margin-bottom:1rem }
+.mb-6 { margin-bottom:1.5rem }
+@media (min-width: 768px) { .md\:aspect-\[3\/4\] { aspect-ratio:3/4 } }
+@media (min-width: 768px) { .md\:divide-x > :not([hidden]) ~ :not([hidden]) { border-right-width:0;border-left-width:1px } }
+@media (min-width: 768px) { .md\:divide-y-0 > :not([hidden]) ~ :not([hidden]) { border-top-width:0 } }
+@media (min-width: 768px) { .md\:flex { display:flex } }
+@media (min-width: 768px) { .md\:flex-row { flex-direction:row } }
+@media (min-width: 768px) { .md\:font-display-lg { font-family:'Playfair Display', Georgia, serif } }
+@media (min-width: 768px) { .md\:gap-6 { gap:1.5rem } }
+@media (min-width: 768px) { .md\:grid-cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)) } }
+@media (min-width: 768px) { .md\:grid-cols-3 { grid-template-columns:repeat(3,minmax(0,1fr)) } }
+@media (min-width: 768px) { .md\:grid-cols-4 { grid-template-columns:repeat(4,minmax(0,1fr)) } }
+@media (min-width: 768px) { .md\:hidden { display:none } }
+@media (min-width: 768px) { .md\:p-10 { padding:2.5rem } }
+@media (min-width: 768px) { .md\:py-0 { padding-top:0;padding-bottom:0 } }
+@media (min-width: 768px) { .md\:py-20 { padding-top:5rem;padding-bottom:5rem } }
+@media (min-width: 768px) { .md\:py-24 { padding-top:6rem;padding-bottom:6rem } }
+@media (min-width: 768px) { .md\:text-display-lg { font-size:64px;line-height:72px;font-weight:700;letter-spacing:-0.02em } }
+@media (min-width: 768px) { .md\:text-right { text-align:right } }
+.min-h-screen { min-height:100vh }
+.mt-1 { margin-top:0.25rem }
+.mt-10 { margin-top:2.5rem }
+.mt-2 { margin-top:0.5rem }
+.mt-4 { margin-top:1rem }
+.mt-6 { margin-top:1.5rem }
+.mt-8 { margin-top:2rem }
+.mt-auto { margin-top:auto }
+.mx-auto { margin-left:auto;margin-right:auto }
+.object-cover { object-fit:cover }
+.overflow-hidden { overflow:hidden }
+.overflow-x-hidden { overflow-x:hidden }
+.overflow-y-auto { overflow-y:auto }
+.p-5 { padding:1.25rem }
+.p-6 { padding:1.5rem }
+.p-8 { padding:2rem }
+.pb-1 { padding-bottom:0.25rem }
+.pt-4 { padding-top:1rem }
+.pt-6 { padding-top:1.5rem }
+.px-0 { padding-left:0;padding-right:0 }
+.px-3 { padding-left:0.75rem;padding-right:0.75rem }
+.px-4 { padding-left:1rem;padding-right:1rem }
+.px-5 { padding-left:1.25rem;padding-right:1.25rem }
+.px-6 { padding-left:1.5rem;padding-right:1.5rem }
+.px-8 { padding-left:2rem;padding-right:2rem }
+.py-1\.5 { padding-top:0.375rem;padding-bottom:0.375rem }
+.py-12 { padding-top:3rem;padding-bottom:3rem }
+.py-16 { padding-top:4rem;padding-bottom:4rem }
+.py-2 { padding-top:0.5rem;padding-bottom:0.5rem }
+.py-2\.5 { padding-top:0.625rem;padding-bottom:0.625rem }
+.py-3 { padding-top:0.75rem;padding-bottom:0.75rem }
+.py-3\.5 { padding-top:0.875rem;padding-bottom:0.875rem }
+.py-4 { padding-top:1rem;padding-bottom:1rem }
+.relative { position:relative }
+.resize-none { resize:none }
+.right-4 { right:1rem }
+.rounded-2xl { border-radius:1rem }
+.rounded-3xl { border-radius:1.5rem }
+.rounded-full { border-radius:9999px }
+.shadow-lg { box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -4px rgba(0,0,0,0.1) }
+.shadow-primary\/20 { box-shadow:0 1px 3px 0 rgba(242,202,80,0.2),0 1px 2px -1px rgba(242,202,80,0.2) }
+.space-x-8 > :not([hidden]) ~ :not([hidden]) { margin-left:2rem }
+.text-2xl { font-size:24px;line-height:32px }
+.text-\[11px\] { font-size:11px }
+.text-\[16px\] { font-size:16px }
+.text-center { text-align:center }
+.text-on-primary { color:rgb(60,47,0) }
+.text-on-surface { color:rgb(226,226,226) }
+.text-on-surface-variant { color:rgb(208,197,175) }
+.text-primary { color:rgb(242,202,80) }
+.text-secondary { color:rgb(177,206,183) }
+.text-sm { font-size:14px;line-height:20px }
+.text-tertiary { color:rgb(176,216,186) }
+.text-xl { font-size:20px;line-height:28px }
+.text-xs { font-size:12px;line-height:16px }
+.to-transparent { --tw-gradient-to:transparent }
+.top-0 { top:0 }
+.top-4 { top:1rem }
+.tracking-wider { letter-spacing:0.05em }
+.tracking-widest { letter-spacing:0.1em }
+.transition-all { transition-property:all;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms }
+.transition-colors { transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms }
+.transition-transform { transition-property:transform;transition-timing-function:cubic-bezier(0.4,0,0.2,1);transition-duration:150ms }
+.uppercase { text-transform:uppercase }
+.via-black\/20 { --tw-gradient-stops:var(--tw-gradient-from) rgba(0,0,0,0.2), var(--tw-gradient-to, rgba(0,0,0,0)) }
+.w-10 { width:2.5rem }
+.w-12 { width:3rem }
+.w-14 { width:3.5rem }
+.w-2 { width:0.5rem }
+.w-4 { width:1rem }
+.w-5 { width:1.25rem }
+.w-fit { width:fit-content }
+.w-full { width:100% }
+.z-10 { z-index:10 }
+.z-50 { z-index:50 }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<style>
+    body { background-color: #121414; color: #e2e2e2; font-family: 'Inter', sans-serif; }
+    .glass-panel {
+        background: rgba(53, 79, 61, 0.45);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom-color: rgba(212, 175, 55, 0.15);
+        border-right-color: rgba(212, 175, 55, 0.15);
     }
-    body {
-      background-color: #121414;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
+    .glass-nav {
+        background: rgba(18, 20, 20, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-    a {
-      color: inherit;
-      text-decoration: none;
+    .spotlight-bg {
+        background: radial-gradient(circle at 50% 0%, rgba(53, 79, 61, 0.35) 0%, rgba(18, 20, 20, 1) 60%);
+    }
+    .text-gradient {
+        background: linear-gradient(135deg, #f2ca50 0%, #ffe088 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .video-card:hover .play-overlay { opacity: 1; }
+    .play-overlay { opacity: 0; transition: opacity 0.3s ease; }
+    input:focus, textarea:focus { outline: none; }
+    ::placeholder { color: rgba(208, 197, 175, 0.4); }
+
+    /* Hero Video */
+    .hero-video-container { position: relative; width: 100%; min-height: 100vh; overflow: hidden; }
+    .hero-video-bg {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        object-fit: cover; transform: scale(1.05);
+        transition: transform 0.1s linear;
+    }
+    .hero-video-overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(to bottom, rgba(18,20,20,0.35) 0%, rgba(18,20,20,0.55) 45%, rgba(18,20,20,0.9) 85%, rgba(18,20,20,1) 100%);
+        z-index: 2;
+    }
+    .hero-content { position: relative; z-index: 10; min-height: 100vh; display: flex; align-items: center; padding-top: 80px; padding-bottom: 80px; }
+
+    /* Scroll Reveal */
+    .scroll-reveal {
+        opacity: 0; transform: translateY(30px);
+        transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+    .scroll-reveal-delay-1 { transition-delay: 0.1s; }
+    .scroll-reveal-delay-2 { transition-delay: 0.2s; }
+    .scroll-reveal-delay-3 { transition-delay: 0.3s; }
+    .scroll-reveal-delay-4 { transition-delay: 0.4s; }
+    .scroll-reveal-delay-5 { transition-delay: 0.5s; }
+
+    @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+    .float-animation { animation: float 4s ease-in-out infinite; }
+    @keyframes scrollBounce { 0%, 100% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(8px); opacity: 0.5; } }
+    .scroll-indicator { animation: scrollBounce 2s ease-in-out infinite; }
+    .nav-scrolled { background: rgba(18, 20, 20, 0.92) !important; box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        .scroll-reveal { opacity: 1; transform: none; transition: none; }
+        .float-animation { animation: none; }
+        .scroll-indicator { animation: none; }
+        .hero-video-bg { transform: none !important; transition: none; }
     }
 
-    /* HEADER & NAVIGATION */
-    header {
-      background-color: #1a1d1d;
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #2a2e2e;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    /* ============ MOBILE RESPONSIVENESS FIXES ============ */
+    /* Use dynamic viewport height on mobile (handles URL bar show/hide) */
+    .hero-video-container { min-height: 100vh; min-height: 100dvh; }
+    .hero-content { min-height: 100vh; min-height: 100dvh; }
+
+    /* Anchor offset for fixed navbar */
+    html { scroll-padding-top: 80px; }
+
+    /* iOS: prevent auto-zoom on input focus (needs 16px font on inputs) */
+    @media (max-width: 767px) {
+        input, select, textarea { font-size: 16px !important; }
     }
-    .logo {
-      font-size: 1.1rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: #f3d078;
-    }
-    .logo span {
-      display: block;
-      font-size: 0.75rem;
-      color: #a0a0a0;
-      font-weight: normal;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
-    }
-    nav a {
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      color: #ccc;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #f3d078;
-    }
-    .btn-book {
-      background-color: #f3d078;
-      color: #121414;
-      padding: 8px 18px;
-      border-radius: 20px;
-      font-weight: bold;
-      font-size: 0.85rem;
+    select { -webkit-appearance: none; appearance: none; }
+
+    /* Remove tap highlight flash on mobile */
+    * { -webkit-tap-highlight-color: transparent; }
+
+    /* Minimum 44px touch targets for buttons/links on touch devices */
+    @media (hover: none) and (pointer: coarse) {
+        a, button { min-height: 44px; }
+        #mobile-menu a { min-height: 44px; display: flex; align-items: center; }
     }
 
-    /* HERO SECTION */
-    .hero {
-      position: relative;
-      min-height: 80vh;
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      padding: 40px 5%;
+    /* Fixed bottom CTA bar: clear body content & respect iPhone safe-area */
+    @media (max-width: 767px) {
+        body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+        footer { padding-bottom: 24px; }
     }
-    .hero-content {
-      max-width: 650px;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(243, 208, 120, 0.15);
-      color: #f3d078;
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      border: 1px solid rgba(243, 208, 120, 0.3);
-    }
-    h1 {
-      font-size: 2.8rem;
-      color: #fff;
-      margin-bottom: 15px;
-      line-height: 1.2;
-    }
-    .hero p {
-      color: #bbb;
-      margin-bottom: 25px;
-      font-size: 0.95rem;
-    }
-    .hero-btns {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .btn-primary {
-      background-color: #f3d078;
-      color: #121414;
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-    .btn-secondary {
-      border: 1px solid #555;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-size: 0.9rem;
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        @media (max-width: 767px) {
+            .mobile-bottom-cta { padding-bottom: env(safe-area-inset-bottom); }
+        }
     }
 
-    /* SECTIONS COMMON */
-    section {
-      padding: 60px 5%;
-    }
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .section-title span {
-      color: #f3d078;
-      font-size: 0.8rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .section-title h2 {
-      font-size: 2rem;
-      color: #fff;
-      margin-top: 5px;
+    /* Slightly tighter hero spacing on small screens */
+    @media (max-width: 480px) {
+        .hero-content { padding-top: 96px; padding-bottom: 96px; }
     }
 
-    /* GRID & CARDS LAYOUT */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-    .card {
-      background-color: #1a1d1d;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid #2a2e2e;
-    }
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 20px;
-    }
-    .card-title {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    .card-text {
-      color: #999;
-      font-size: 0.85rem;
-      margin-bottom: 15px;
-    }
-    .card-price {
-      color: #f3d078;
-      font-weight: bold;
-      font-size: 1.1rem;
+    /* Disable heavy parallax transform on touch devices (smoother scrolling) */
+    @media (hover: none) and (pointer: coarse) {
+        .hero-video-bg { transform: none !important; transition: none; }
     }
 
-    /* STATS SECTION */
-    .stats-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      background-color: #181b1b;
-      padding: 40px 5%;
-      border-top: 1px solid #2a2e2e;
-      border-bottom: 1px solid #2a2e2e;
-      text-align: center;
-    }
-    .stat-box h3 {
-      font-size: 2.2rem;
-      color: #f3d078;
-    }
-    .stat-box p {
-      font-size: 0.8rem;
-      color: #aaa;
-      letter-spacing: 1px;
+    /* ============ MOBILE PERFORMANCE (ANTI-LAG) FIXES ============ */
+    /* backdrop-filter blur is one of the most expensive paint ops on mobile GPUs,
+       and this page stacks many .glass-panel elements. Cut the blur radius hard
+       on small/touch screens — visually near-identical, far cheaper to composite. */
+    @media (max-width: 767px), (hover: none) and (pointer: coarse) {
+        .glass-panel {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            background: rgba(30, 32, 32, 0.72);
+        }
+        .glass-nav {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
     }
 
-    /* CONTACT & FORM SECTION */
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-    .info-box {
-      background-color: #1a1d1d;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #2a2e2e;
-    }
-    .info-box h4 {
-      color: #888;
-      font-size: 0.75rem;
-      letter-spacing: 1px;
-    }
-    .info-box p {
-      color: #fff;
-      font-size: 1.1rem;
-      margin-top: 5px;
-    }
-    .form-container {
-      background-color: #1a1d1d;
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid #2a2e2e;
-    }
-    .form-row {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-    .form-group {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      font-size: 0.75rem;
-      color: #aaa;
-      margin-bottom: 5px;
-      letter-spacing: 1px;
-    }
-    .form-group input, .form-group select, .form-group textarea {
-      background-color: #121414;
-      border: 1px solid #333;
-      padding: 12px;
-      color: #fff;
-      border-radius: 4px;
-      outline: none;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: #f3d078;
-    }
-    .btn-submit {
-      width: 100%;
-      background-color: #f3d078;
-      color: #121414;
-      padding: 14px;
-      border: none;
-      border-radius: 20px;
-      font-weight: bold;
-      cursor: pointer;
+    /* Avoid layout thrash from hover-driven transforms on touch (no real hover there anyway) */
+    @media (hover: none) and (pointer: coarse) {
+        .hover\:-translate-y-1:hover,
+        .hover\:-translate-y-2:hover,
+        .group:hover .group-hover\:scale-105 {
+            transform: none !important;
+        }
     }
 
-    /* FOOTER */
-    footer {
-      background-color: #0d0e0e;
-      padding: 20px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: #666;
-      border-top: 1px solid #1a1d1d;
+    /* Promote only the elements that actually animate, and drop the hint once idle */
+    .hero-video-bg { will-change: transform; }
+    #navbar { will-change: background-color; }
+
+    /* ============ MOBILE TYPOGRAPHY & LAYOUT REFINEMENTS (v2) ============ */
+    /* The custom type scale is desktop-first (48px headlines) with no mobile
+       variants on section headings/prices. Shrink progressively on phones. */
+    @media (max-width: 767px) {
+        .text-headline-xl { font-size: 32px !important; line-height: 40px !important; }
+        .text-headline-lg { font-size: 28px !important; line-height: 36px !important; }
+        .text-headline-md { font-size: 22px !important; line-height: 28px !important; }
+        .text-display-lg-mobile { font-size: 34px !important; line-height: 42px !important; }
+        .text-headline-sm { font-size: 19px !important; line-height: 26px !important; }
+        .text-body-lg { font-size: 16px !important; line-height: 26px !important; }
+        .stat-num { font-size: 34px !important; line-height: 40px !important; }
+    }
+    @media (max-width: 400px) {
+        .text-headline-lg { font-size: 25px !important; line-height: 32px !important; }
+        .text-display-lg-mobile { font-size: 30px !important; line-height: 38px !important; }
     }
 
-    /* =================================================== */
-    /* MOBILE RESPONSIVE MEDIA QUERIES (BREAKPOINT: 768px) */
-    /* =================================================== */
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 4%;
-      }
-      nav ul {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .btn-book {
-        width: 100%;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      .hero-btns {
-        flex-direction: column;
-      }
-      .hero-btns a {
-        text-align: center;
-      }
-      .cards-grid {
-        grid-template-columns: 1fr;
-      }
-      .stats-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .contact-container {
-        grid-template-columns: 1fr;
-      }
-      .form-row {
-        flex-direction: column;
-        gap: 0;
-      }
-      footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
+    /* About image: 450px tall is half the phone screen */
+    @media (max-width: 767px) {
+        .about-img { height: 300px !important; }
     }
-  </style>
+
+    /* Hero CTAs: full-width, thumb-reachable on narrow phones */
+    @media (max-width: 480px) {
+        .hero-cta { width: 100%; justify-content: center; }
+    }
+
+    /* Guarantee no horizontal scroll at any width */
+    html, body { overflow-x: hidden; max-width: 100vw; }
+</style>
 </head>
-<body>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden min-h-screen relative spotlight-bg">
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="logo">
-      RAM JAWAI
-      <span>SAFARI EXPERT</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#safaris">SAFARIS</a></li>
-        <li><a href="#media">MEDIA</a></li>
-      </ul>
-    </nav>
-    <a href="#contact" class="btn-book">BOOK NOW</a>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <span class="badge">• AWARD WINNING FILMMAKER</span>
-      <h1>Ram Jawai<br>Leopard Safari Expert</h1>
-      <p>Jawai Leopard Safari Expert & Wildlife Filmmaker. Awarded 'Best & Youngest Filmmaker of India 2023'. Track leopards in their natural granite habitat with the most trusted guide in Jawai.</p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">CALL FOR BOOKING</a>
-        <a href="#safaris" class="btn-secondary">EXPLORE SAFARIS</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCES SECTION -->
-  <section id="safaris">
-    <div class="section-title">
-      <span>OUR EXPERIENCES</span>
-      <h2>Curated Safari Adventures</h2>
-    </div>
-    <div class="cards-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?auto=format&fit=crop&w=600&q=80" alt="Leopard Tracking">
-        <div class="card-body">
-          <div class="card-title">Leopard Tracking</div>
-          <p class="card-text">Track leopards through ancient granite hills with Ram's expert guidance. Morning and evening slots available.</p>
-          <div class="card-price">From $899</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80" alt="Wildlife Photography">
-        <div class="card-body">
-          <div class="card-title">Wildlife Photography</div>
-          <p class="card-text">Capture stunning frames of leopards, crocodiles, and migratory birds with professional tips from an award-winning filmmaker.</p>
-          <div class="card-price">From $1,099</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Granite Hill Sunset Tour">
-        <div class="card-body">
-          <div class="card-title">Granite Hill Sunset Tour</div>
-          <p class="card-text">A serene evening journey across the dam and granite hills to watch the sun set over the Jawai landscape.</p>
-          <div class="card-price">From $599</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS COUNTER SECTION -->
-  <div class="stats-container">
-    <div class="stat-box">
-      <h3>1,250+</h3>
-      <p>HAPPY WILDLIFE LOVERS</p>
-    </div>
-    <div class="stat-box">
-      <h3>320+</h3>
-      <p>UNIQUE FLORA & FAUNA</p>
-    </div>
-    <div class="stat-box">
-      <h3>98%</h3>
-      <p>SATISFIED CLIENTS</p>
-    </div>
-  </div>
-
-  <!-- CONTACT & BOOKING SECTION -->
-  <section id="contact">
-    <div class="contact-container">
-      <div>
-        <span class="badge">GET IN TOUCH</span>
-        <h2 style="font-size: 2.2rem; color: #fff; margin-bottom: 15px;">Book Your Jawai Adventure</h2>
-        <p style="color: #aaa; margin-bottom: 25px; font-size: 0.9rem;">Ready to witness the wild side of Rajasthan? Call Ram directly or fill out the inquiry form for a quick response within 2 hours.</p>
-
-        <div class="info-box">
-          <h4>PHONE / WHATSAPP</h4>
-          <p>+91 92169 95567</p>
-        </div>
-        <div class="info-box">
-          <h4>INSTAGRAM</h4>
-          <p>@ram_jawai</p>
-        </div>
-        <div class="info-box">
-          <h4>YOUTUBE</h4>
-          <p>3dotFilmStudio</p>
-        </div>
-      </div>
-
-      <div class="form-container">
-        <h3 style="color: #fff; margin-bottom: 20px;">Quick Booking Inquiry</h3>
-        <form action="#" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <label>NAME</label>
-              <input type="text" placeholder="Your name" required>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+    <div class="max-w-[1440px] mx-auto flex justify-between items-center px-6 lg:px-8 py-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">forest</span>
             </div>
-            <div class="form-group">
-              <label>PHONE</label>
-              <input type="tel" placeholder="+91..." required>
+            <div>
+                <div class="text-headline-sm font-headline-sm text-on-surface uppercase tracking-widest text-sm">Ram Jawai</div>
+                <div class="text-[11px] text-on-surface-variant tracking-wider uppercase font-medium">Safari Expert</div>
             </div>
-          </div>
-          <div class="form-group">
-            <label>EMAIL</label>
-            <input type="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label>PREFERRED SAFARI</label>
-            <select>
-              <option>Leopard Tracking</option>
-              <option>Wildlife Photography</option>
-              <option>Granite Hill Sunset Tour</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>MESSAGE</label>
-            <textarea rows="4" placeholder="Tell us about your group size and preferred dates..."></textarea>
-          </div>
-          <button type="submit" class="btn-submit">SEND INQUIRY</button>
-        </form>
-      </div>
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+            <a class="text-primary border-b-2 border-primary pb-1 text-label-md font-label-md uppercase hover:opacity-80 transition-all" href="#home">Home</a>
+            <a class="text-on-surface hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase hover:opacity-80" href="#about">About</a>
+            <a class="text-on-surface hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase hover:opacity-80" href="#experiences">Safaris</a>
+            <a class="text-on-surface hover:text-primary transition-colors duration-300 text-label-md font-label-md uppercase hover:opacity-80" href="#media">Media</a>
+        </div>
+        <a href="tel:+919216995567" class="hidden md:flex bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md uppercase hover:brightness-110 transition-all items-center gap-2">
+            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">call</span>
+            Book Now
+        </a>
+        <button class="md:hidden text-on-surface" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
     </div>
-  </section>
+    <div id="mobile-menu" class="hidden md:hidden glass-nav border-t border-on-surface/10 max-h-[75vh] overflow-y-auto">
+        <div class="px-6 py-4 flex flex-col gap-4">
+            <a class="text-primary text-label-md font-label-md uppercase" href="#home">Home</a>
+            <a class="text-on-surface text-label-md font-label-md uppercase" href="#about">About</a>
+            <a class="text-on-surface text-label-md font-label-md uppercase" href="#experiences">Safaris</a>
+            <a class="text-on-surface text-label-md font-label-md uppercase" href="#media">Media</a>
+            <a class="text-on-surface text-label-md font-label-md uppercase" href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
 
-  <!-- FOOTER -->
-  <footer>
-    <div>
-      <strong style="color: #aaa;">RAM JAWAI</strong> - JAWAI LEOPARD SAFARI EXPERT
+<!-- Hero Section -->
+<section id="home" class="hero-video-container">
+    <video
+        id="hero-video"
+        class="hero-video-bg"
+        src="0902.mp4"
+        autoplay muted loop playsinline
+        preload="metadata"
+        poster="https://images.unsplash.com/photo-1549366021-9f761d450615?w=1600&q=80"
+        onerror="this.style.display='none';"
+    ></video>
+    <div class="hero-video-overlay"></div>
+    <div class="hero-content max-w-[1440px] mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                <div class="scroll-reveal inline-flex items-center gap-2 glass-panel px-4 py-2 rounded-full w-fit">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    <span class="text-label-md font-label-md text-primary uppercase tracking-widest">Award Winning Filmmaker</span>
+                </div>
+                <h1 class="scroll-reveal scroll-reveal-delay-1 text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-on-surface leading-tight drop-shadow-lg">
+                    Ram Jawai<br/><span class="text-gradient">Leopard Safari</span><br/>Expert
+                </h1>
+                <p class="scroll-reveal scroll-reveal-delay-2 text-body-lg font-body-lg text-on-surface max-w-xl leading-relaxed drop-shadow-md" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                    Jawai Leopard Safari Expert & Wildlife Filmmaker. Awarded <span class="text-primary font-semibold">'Best & Youngest Filmmaker of India 2023'</span>. Track leopards in their natural granite habitat with the most trusted guide in Jawai.
+                </p>
+                <div class="scroll-reveal scroll-reveal-delay-3 flex flex-wrap gap-4 mt-4">
+                    <a href="tel:+919216995567" class="hero-cta bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-md text-label-md uppercase hover:brightness-110 transition-all shadow-lg shadow-primary/20 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">call</span>
+                        Call for Booking
+                    </a>
+                    <a href="#experiences" class="hero-cta glass-panel text-on-surface px-8 py-3.5 rounded-full font-label-md text-label-md uppercase hover:border-primary/50 transition-all">
+                        Explore Safaris
+                    </a>
+                </div>
+                <div class="scroll-reveal scroll-reveal-delay-4 flex items-center gap-6 mt-6 pt-6 border-t border-white/20">
+                    <div class="flex -space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface flex items-center justify-center text-xs text-primary font-bold">RJ</div>
+                        <div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface flex items-center justify-center text-xs text-secondary font-bold">3D</div>
+                        <div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-surface flex items-center justify-center text-xs text-tertiary font-bold">+</div>
+                    </div>
+                    <div class="text-sm text-on-surface">
+                        <span class="text-primary font-semibold">1,250+</span> happy wildlife lovers
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 hidden lg:flex justify-end">
+                <div class="scroll-reveal scroll-reveal-delay-5 float-animation">
+                    <div class="glass-panel rounded-3xl p-6 max-w-[280px] border border-primary/20">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                                <span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">videocam</span>
+                            </div>
+                            <div>
+                                <div class="text-headline-sm font-headline-sm text-on-surface">Wildlife Filmmaker</div>
+                                <div class="text-body-md text-on-surface-variant">3doTFilmStudio</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                            <div>
+                                <div class="text-headline-md font-headline-md text-primary">4.9</div>
+                                <div class="text-label-md text-on-surface-variant uppercase tracking-wider">Rating</div>
+                            </div>
+                            <div class="flex gap-1">
+                                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 scroll-indicator">
+            <span class="text-label-md text-on-surface-variant uppercase tracking-widest text-xs">Scroll to explore</span>
+            <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+        </div>
     </div>
-    <div>
-      Awarded 'Best & Youngest Filmmaker of India 2023' | Jawai, Rajasthan, India
+</section>
+
+<!-- Features Row -->
+<section class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="scroll-reveal glass-panel p-6 rounded-2xl flex items-center gap-5 hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">explore</span>
+            </div>
+            <div>
+                <div class="text-headline-sm font-headline-sm text-on-surface">Expert Guides</div>
+                <div class="text-body-md text-on-surface-variant mt-1">10+ years tracking leopards</div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-1 glass-panel p-6 rounded-2xl flex items-center gap-5 hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">map</span>
+            </div>
+            <div>
+                <div class="text-headline-sm font-headline-sm text-on-surface">Tailored Itineraries</div>
+                <div class="text-body-md text-on-surface-variant mt-1">Customized to your schedule</div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 glass-panel p-6 rounded-2xl flex items-center gap-5 hover:-translate-y-1 transition-transform duration-300">
+            <div class="w-14 h-14 rounded-full bg-primary/15 flex items-center justify-center text-primary flex-shrink-0">
+                <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+            </div>
+            <div>
+                <div class="text-headline-sm font-headline-sm text-on-surface">Best Price</div>
+                <div class="text-body-md text-on-surface-variant mt-1">No hidden charges</div>
+            </div>
+        </div>
     </div>
-  </footer>
+</section>
+
+<!-- About Ram -->
+<section id="about" class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative scroll-reveal">
+            <div class="rounded-3xl overflow-hidden border border-outline-variant/20">
+                <img class="about-img w-full h-[450px] object-cover" loading="eager" fetchpriority="high" decoding="async" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80" alt="About Ram Jawai"/>
+            </div>
+            <div class="absolute -bottom-6 -right-6 glass-panel rounded-2xl p-6 hidden lg:block max-w-[240px]">
+                <div class="text-label-md text-primary uppercase tracking-widest mb-2">Achievement</div>
+                <div class="text-headline-sm font-headline-sm text-on-surface leading-snug">Best & Youngest Filmmaker of India 2023</div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <div class="scroll-reveal text-label-md font-label-md text-primary uppercase tracking-widest">About Ram</div>
+            <h2 class="scroll-reveal scroll-reveal-delay-1 text-headline-lg font-headline-lg text-on-surface">The Man Behind<br/><span class="text-gradient">Jawai's Wildest Stories</span></h2>
+            <p class="scroll-reveal scroll-reveal-delay-2 text-body-lg text-on-surface-variant leading-relaxed">
+                Born and raised in the granite hills of Jawai, Ram Jawai (Ram Rabari Velar) has spent his life understanding the secret trails of leopards. His intimate knowledge of the terrain, combined with his award-winning filmmaking eye, makes every safari a cinematic adventure.
+            </p>
+            <p class="scroll-reveal scroll-reveal-delay-2 text-body-md text-on-surface-variant leading-relaxed">
+                As the recipient of the <span class="text-primary font-semibold">'Best & Youngest Filmmaker of India 2023'</span> award, Ram brings a unique perspective to wildlife tourism — blending raw tracking expertise with professional storytelling through his lens.
+            </p>
+            <div class="scroll-reveal scroll-reveal-delay-3 flex flex-wrap gap-3 mt-2">
+                <span class="glass-panel px-4 py-2 rounded-full text-label-md text-on-surface uppercase tracking-wider">Leopard Tracking</span>
+                <span class="glass-panel px-4 py-2 rounded-full text-label-md text-on-surface uppercase tracking-wider">Wildlife Film</span>
+                <span class="glass-panel px-4 py-2 rounded-full text-label-md text-on-surface uppercase tracking-wider">Granite Hills</span>
+            </div>
+            <div class="scroll-reveal scroll-reveal-delay-4 flex gap-4 mt-4">
+                <a href="https://instagram.com/ram_jawai" target="_blank" rel="noopener" class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:border-primary/50 transition-all">
+                    <svg class="w-5 h-5 text-on-surface" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://youtube.com/3doTFilmStudio" target="_blank" rel="noopener" class="glass-panel w-12 h-12 rounded-full flex items-center justify-center hover:border-primary/50 transition-all">
+                    <svg class="w-5 h-5 text-on-surface" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Safari Experiences -->
+<section id="experiences" class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="text-center mb-12">
+        <div class="scroll-reveal text-label-md font-label-md text-primary uppercase tracking-widest mb-4">Our Experiences</div>
+        <h2 class="scroll-reveal scroll-reveal-delay-1 text-headline-lg font-headline-lg text-on-surface">Curated Safari Adventures</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="scroll-reveal glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=800&q=80" alt="Leopard Tracking"/>
+                <div class="absolute top-4 left-4 glass-panel px-3 py-1.5 rounded-full">
+                    <span class="text-label-md font-label-md text-primary uppercase">Most Popular</span>
+                </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Leopard Tracking</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">Track leopards through ancient granite hills with Ram's expert guidance. Morning and evening slots available.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">From $899</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-1 glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&q=80" alt="Wildlife Photography"/>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Wildlife Photography</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">Capture stunning frames of leopards, crocodiles, and migratory birds with professional tips from an award-winning filmmaker.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">From $1,099</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80" alt="Granite Hill Sunset Tour"/>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Granite Hill Sunset Tour</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">A serene evening journey across the dam and granite hills, watching the sun set over the Jawai landscape.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">From $599</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Experiences -->
+<section class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24 relative z-10">
+    <div class="text-center mb-12">
+        <div class="scroll-reveal text-label-md font-label-md text-primary uppercase tracking-widest mb-4">Popular Packages</div>
+        <h2 class="scroll-reveal scroll-reveal-delay-1 text-headline-lg font-headline-lg text-on-surface">Guest Favorites</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="scroll-reveal glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" alt="Leopard Hills Safari"/>
+                <div class="absolute top-4 right-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-label-md font-label-md text-on-surface">4.9</span>
+                </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Leopard Hills Safari</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">Encounter majestic leopards in their natural granite habitat with expert tracking.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">$899</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-1 glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800&q=80" alt="Bird and Dam Trail"/>
+                <div class="absolute top-4 right-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-label-md font-label-md text-on-surface">4.8</span>
+                </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Bird & Dam Trail</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">A serene journey watching migratory birds at sunset over the Jawai dam.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">$1,099</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 glass-panel rounded-3xl overflow-hidden flex flex-col group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+            <div class="relative h-64 overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1500051638674-ff996a0ec29e?w=800&q=80" alt="Photography Workshop"/>
+                <div class="absolute top-4 right-4 glass-panel px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-label-md font-label-md text-on-surface">5.0</span>
+                </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+                <h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Photography Workshop</h3>
+                <p class="text-body-md text-on-surface-variant mb-6 flex-grow">Master wildlife photography with professional guidance from an award-winning filmmaker.</p>
+                <div class="flex justify-between items-center flex-wrap gap-3 mt-auto">
+                    <span class="text-headline-md font-headline-md text-primary">$1,250</span>
+                    <button class="bg-transparent border border-outline hover:border-primary text-on-surface px-5 py-2.5 rounded-full font-label-md text-label-md uppercase transition-colors">Explore Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Media / Video Highlights -->
+<section id="media" class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="text-center mb-12">
+        <div class="scroll-reveal text-label-md font-label-md text-primary uppercase tracking-widest mb-4">Behind the Lens</div>
+        <h2 class="scroll-reveal scroll-reveal-delay-1 text-headline-lg font-headline-lg text-on-surface">Viral Wildlife Moments</h2>
+        <p class="scroll-reveal scroll-reveal-delay-2 text-body-lg text-on-surface-variant mt-4 max-w-2xl mx-auto">Catch a glimpse of Ram's most viewed wildlife content across Instagram and YouTube.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div class="scroll-reveal video-card relative rounded-2xl overflow-hidden cursor-pointer group aspect-[9/16] md:aspect-[3/4]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&q=80" alt="Viral Reel 1"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="play-overlay absolute inset-0 flex items-center justify-center bg-black/30">
+                <div class="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+                <div class="glass-panel px-3 py-1.5 rounded-full w-fit mb-2">
+                    <span class="text-label-md text-primary uppercase">1.7M views</span>
+                </div>
+                <div class="text-sm text-on-surface font-medium line-clamp-2">Leopard spotted at dawn on granite hill</div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-1 video-card relative rounded-2xl overflow-hidden cursor-pointer group aspect-[9/16] md:aspect-[3/4]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=600&q=80" alt="Viral Reel 2"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="play-overlay absolute inset-0 flex items-center justify-center bg-black/30">
+                <div class="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+                <div class="glass-panel px-3 py-1.5 rounded-full w-fit mb-2">
+                    <span class="text-label-md text-primary uppercase">7.1M views</span>
+                </div>
+                <div class="text-sm text-on-surface font-medium line-clamp-2">Mother leopard with cubs close encounter</div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 video-card relative rounded-2xl overflow-hidden cursor-pointer group aspect-[9/16] md:aspect-[3/4]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600&q=80" alt="Viral Reel 3"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="play-overlay absolute inset-0 flex items-center justify-center bg-black/30">
+                <div class="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+                <div class="glass-panel px-3 py-1.5 rounded-full w-fit mb-2">
+                    <span class="text-label-md text-primary uppercase">2.4M views</span>
+                </div>
+                <div class="text-sm text-on-surface font-medium line-clamp-2">Crocodile vs leopard standoff at Jawai dam</div>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-3 video-card relative rounded-2xl overflow-hidden cursor-pointer group aspect-[9/16] md:aspect-[3/4]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1549366021-9f761d450615?w=600&q=80" alt="Viral Reel 4"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="play-overlay absolute inset-0 flex items-center justify-center bg-black/30">
+                <div class="w-14 h-14 rounded-full bg-primary/90 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                </div>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+                <div class="glass-panel px-3 py-1.5 rounded-full w-fit mb-2">
+                    <span class="text-label-md text-primary uppercase">980K views</span>
+                </div>
+                <div class="text-sm text-on-surface font-medium line-clamp-2">Sunset timelapse over Jawai hills</div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-reveal text-center mt-10">
+        <a href="https://instagram.com/ram_jawai" target="_blank" rel="noopener" class="inline-flex items-center gap-2 glass-panel px-6 py-3 rounded-full text-label-md text-on-surface uppercase tracking-wider hover:border-primary/50 transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Follow @ram_jawai
+        </a>
+    </div>
+</section>
+
+<!-- Stats & Trust Banner -->
+<section class="bg-surface-container-highest py-16 md:py-20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-outline-variant">
+        <div class="scroll-reveal py-4 md:py-0">
+            <p class="stat-num text-headline-lg font-headline-lg text-primary mb-2">1,250+</p>
+            <p class="text-label-md font-label-md text-on-surface uppercase tracking-widest">Happy Wildlife Lovers</p>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-1 py-4 md:py-0">
+            <p class="stat-num text-headline-lg font-headline-lg text-primary mb-2">320+</p>
+            <p class="text-label-md font-label-md text-on-surface uppercase tracking-widest">Unique Flora & Fauna</p>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 py-4 md:py-0">
+            <p class="stat-num text-headline-lg font-headline-lg text-primary mb-2">98%</p>
+            <p class="text-label-md font-label-md text-on-surface uppercase tracking-widest">Satisfied Clients</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Booking -->
+<section id="contact" class="max-w-[1440px] mx-auto px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div class="flex flex-col gap-6">
+            <div class="scroll-reveal text-label-md font-label-md text-primary uppercase tracking-widest">Get in Touch</div>
+            <h2 class="scroll-reveal scroll-reveal-delay-1 text-headline-lg font-headline-lg text-on-surface">Book Your<br/><span class="text-gradient">Jawai Adventure</span></h2>
+            <p class="scroll-reveal scroll-reveal-delay-2 text-body-lg text-on-surface-variant leading-relaxed">
+                Ready to witness the wild side of Rajasthan? Call Ram directly or fill out the inquiry form for a quick response within 2 hours.
+            </p>
+            <div class="flex flex-col gap-4 mt-4">
+                <a href="tel:+919216995567" class="scroll-reveal scroll-reveal-delay-3 glass-panel p-5 rounded-2xl flex items-center gap-4 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">call</span>
+                    </div>
+                    <div>
+                        <div class="text-label-md text-on-surface-variant uppercase tracking-wider">Phone / WhatsApp</div>
+                        <div class="text-headline-sm font-headline-sm text-on-surface">+91 92169 95567</div>
+                    </div>
+                </a>
+                <a href="https://instagram.com/ram_jawai" target="_blank" rel="noopener" class="scroll-reveal scroll-reveal-delay-3 glass-panel p-5 rounded-2xl flex items-center gap-4 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <div>
+                        <div class="text-label-md text-on-surface-variant uppercase tracking-wider">Instagram</div>
+                        <div class="text-headline-sm font-headline-sm text-on-surface">@ram_jawai</div>
+                    </div>
+                </a>
+                <a href="https://youtube.com/3doTFilmStudio" target="_blank" rel="noopener" class="scroll-reveal scroll-reveal-delay-4 glass-panel p-5 rounded-2xl flex items-center gap-4 hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 rounded-full bg-primary/15 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </div>
+                    <div>
+                        <div class="text-label-md text-on-surface-variant uppercase tracking-wider">YouTube</div>
+                        <div class="text-headline-sm font-headline-sm text-on-surface">3doTFilmStudio</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-reveal scroll-reveal-delay-2 glass-panel rounded-3xl p-8 md:p-10">
+            <h3 class="text-headline-sm font-headline-sm text-on-surface mb-6">Quick Booking Inquiry</h3>
+            <form class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('Thank you! Ram will contact you shortly.');">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-label-md font-label-md text-on-surface uppercase mb-2">Name</label>
+                        <input type="text" placeholder="Your name" class="w-full bg-surface-container-high border-b-2 border-primary border-t-0 border-l-0 border-r-0 text-on-surface px-0 py-3 focus:ring-0 focus:border-primary" required/>
+                    </div>
+                    <div>
+                        <label class="block text-label-md font-label-md text-on-surface uppercase mb-2">Phone</label>
+                        <input type="tel" placeholder="+91..." class="w-full bg-surface-container-high border-b-2 border-primary border-t-0 border-l-0 border-r-0 text-on-surface px-0 py-3 focus:ring-0 focus:border-primary" required/>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-label-md font-label-md text-on-surface uppercase mb-2">Email</label>
+                    <input type="email" placeholder="your@email.com" class="w-full bg-surface-container-high border-b-2 border-primary border-t-0 border-l-0 border-r-0 text-on-surface px-0 py-3 focus:ring-0 focus:border-primary"/>
+                </div>
+                <div>
+                    <label class="block text-label-md font-label-md text-on-surface uppercase mb-2">Preferred Safari</label>
+                    <select class="w-full bg-surface-container-high border-b-2 border-primary border-t-0 border-l-0 border-r-0 text-on-surface px-0 py-3 focus:ring-0 focus:border-primary">
+                        <option>Leopard Tracking</option>
+                        <option>Wildlife Photography</option>
+                        <option>Granite Hill Sunset Tour</option>
+                        <option>Leopard Hills Safari</option>
+                        <option>Bird & Dam Trail</option>
+                        <option>Photography Workshop</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-label-md font-label-md text-on-surface uppercase mb-2">Message</label>
+                    <textarea rows="3" placeholder="Tell us about your group size and preferred dates..." class="w-full bg-surface-container-high border-b-2 border-primary border-t-0 border-l-0 border-r-0 text-on-surface px-0 py-3 focus:ring-0 focus:border-primary resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-on-primary py-4 rounded-full font-label-md text-label-md uppercase hover:brightness-110 transition-all shadow-lg mt-2">
+                    Send Inquiry
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-outline-variant/20 py-12 mt-8">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">forest</span>
+            </div>
+            <div>
+                <div class="text-headline-sm font-headline-sm text-on-surface uppercase tracking-widest text-sm">Ram Jawai</div>
+                <div class="text-[11px] text-on-surface-variant tracking-wider uppercase">Jawai Leopard Safari Expert</div>
+            </div>
+        </div>
+        <div class="text-body-md text-on-surface-variant text-center md:text-right">
+            <p> Awarded 'Best & Youngest Filmmaker of India 2023'</p>
+            <p class="mt-1">Jawai, Rajasthan, India</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Mobile Bottom Nav -->
+<div class="mobile-bottom-cta md:hidden fixed bottom-0 w-full z-50 bg-primary shadow-lg flex justify-center items-center">
+    <a class="flex items-center justify-center gap-2 py-4 w-full text-on-primary font-bold text-label-md font-label-md uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 duration-200" href="tel:+919216995567">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">call</span>
+        Call for Booking
+    </a>
+</div>
+
+<script>
+(function() {
+    'use strict';
+
+    // ===== HERO VIDEO: AUTOPLAY WITH PAUSE ON SCROLL AWAY =====
+    const video = document.getElementById('hero-video');
+    const heroContainer = document.querySelector('.hero-video-container');
+
+    if (video && heroContainer) {
+        let hasPlayed = false;
+
+        // Attempt autoplay with fallback
+        function tryPlay() {
+            if (hasPlayed) return;
+            video.play().then(function() {
+                hasPlayed = true;
+            }).catch(function() {
+                // Autoplay blocked — wait for first user interaction
+                var resume = function() {
+                    video.play().then(function() { hasPlayed = true; });
+                    document.removeEventListener('click', resume);
+                    document.removeEventListener('scroll', resume);
+                    document.removeEventListener('touchstart', resume);
+                };
+                document.addEventListener('click', resume, { once: true });
+                document.addEventListener('scroll', resume, { once: true });
+                document.addEventListener('touchstart', resume, { once: true });
+            });
+        }
+
+        // Try immediately and again when metadata loads
+        tryPlay();
+        video.addEventListener('loadedmetadata', tryPlay);
+
+        // Pause when scrolled off-screen to save CPU/battery
+        var heroObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    if (hasPlayed) video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0 });
+        heroObserver.observe(heroContainer);
+
+        // Cheap parallax zoom via CSS transform — but skip the work entirely on
+        // touch/coarse-pointer devices (phones/tablets), since CSS already hides
+        // the effect there. No point running getBoundingClientRect() every scroll
+        // frame if the result is discarded — that's a common source of mobile jank.
+        var isCoarsePointer = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!isCoarsePointer && !prefersReducedMotion) {
+            var videoEl = document.getElementById('hero-video');
+            var ticking = false;
+
+            function updateParallax() {
+                var rect = heroContainer.getBoundingClientRect();
+                var windowHeight = window.innerHeight;
+                var progress = Math.max(0, Math.min(1, -rect.top / (rect.height - windowHeight)));
+                var scale = 1.0 + (progress * 0.12);
+                videoEl.style.transform = 'scale(' + scale + ')';
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
+    }
+
+    // ===== SCROLL REVEAL ANIMATIONS =====
+    var revealElements = document.querySelectorAll('.scroll-reveal');
+    var revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+    // Trigger hero reveals immediately
+    document.querySelectorAll('#home .scroll-reveal').forEach(function(el) {
+        setTimeout(function() { el.classList.add('visible'); }, 300);
+    });
+
+    // ===== NAVBAR SCROLL EFFECT (rAF-throttled to avoid running on every scroll tick) =====
+    var navbar = document.getElementById('navbar');
+    var navTicking = false;
+    function updateNavbar() {
+        navbar.classList.toggle('nav-scrolled', window.pageYOffset > 80);
+        navTicking = false;
+    }
+    window.addEventListener('scroll', function() {
+        if (!navTicking) {
+            window.requestAnimationFrame(updateNavbar);
+            navTicking = true;
+        }
+    }, { passive: true });
+
+    // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href === '#') return;
+            e.preventDefault();
+            var target = document.querySelector(href);
+            if (target) {
+                var offset = 80;
+                var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+            }
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
+    });
+
+})();
+</script>
 
 </body>
 </html>
